@@ -21,7 +21,9 @@ void test_func(int value) {
   int foo;
   for (volatile int i = 0; i < value; i++) {
     foo++;
-    for (int j = 0; j < 10; j++)
-      ; // just waste some time
+    for (int j = 0; j < foo; j++) {
+      for (int k = 0; k < value; k++)
+        ; // just waste some time
+    }
   }
 }
