@@ -20,11 +20,8 @@ void loop() {
 void test_func(int value) {
   int foo;
   for (volatile int i = 0; i < value; i++) {
-    for (volatile j = 0; j < value; j++) {
-      for
-        volatile k = 0;
-      k < value; k++)
-      {
+    for (volatile int j = 0; j < value; j++) {
+      for (volatile int k = 0; k < value; k++) {
         foo++;
       }
     }
